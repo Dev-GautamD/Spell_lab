@@ -1,0 +1,4 @@
+
+*** Running vivado
+    with args -log pulse_gen_block_axi_bram_ctrl_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pulse_gen_block_axi_bram_ctrl_0_0.tcl
+
