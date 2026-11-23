@@ -1,0 +1,416 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Oct 12 12:12:10 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/gautam-d/Gautam/FPGA-Notes-for-Scientists'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/gautam-d/Gautam/nodmanodecim'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/gautam-d/Vivado/2025.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/gautam-d/nodma_cic_extend/nodma_cic_extend.srcs/utils_1/imports/synth_1/stream_ctrl.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/gautam-d/nodma_cic_extend/nodma_cic_extend.srcs/utils_1/imports/synth_1/stream_ctrl.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top design_1_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 140690
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2252.051 ; gain = 484.156 ; free physical = 4104 ; free virtual = 12397
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6157] synthesizing module 'design_1_adc_0_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_adc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_adc_0_0' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_adc_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'adc_data_2_tdata' of module 'design_1_adc_0_0' is unconnected for instance 'adc_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:219]
+WARNING: [Synth 8-7071] port 'adc_data_2_tvalid' of module 'design_1_adc_0_0' is unconnected for instance 'adc_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:219]
+WARNING: [Synth 8-7023] instance 'adc_0' of module 'design_1_adc_0_0' has 8 connections declared, but only 6 given [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:219]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:556]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1R706YB' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:1780]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_auto_pc_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_auto_pc_0' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1R706YB' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:1780]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_3HM21E' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:2106]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_auto_ds_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_auto_ds_0' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_ds_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_auto_pc_1' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_auto_pc_1' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_pc_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'design_1_axi_mem_intercon_imp_auto_pc_1' is unconnected for instance 'auto_pc' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:2399]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'design_1_axi_mem_intercon_imp_auto_pc_1' is unconnected for instance 'auto_pc' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:2399]
+WARNING: [Synth 8-7023] instance 'auto_pc' of module 'design_1_axi_mem_intercon_imp_auto_pc_1' has 56 connections declared, but only 54 given [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:2399]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_3HM21E' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:2106]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1RU8VXS' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:2456]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_auto_ds_1' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_auto_ds_1' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_ds_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_auto_pc_2' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_auto_pc_2' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_pc_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1RU8VXS' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:2456]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_7HNO1D' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:2814]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_auto_pc_3' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_pc_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_auto_pc_3' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_pc_3_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_auto_us_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_auto_us_0' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_auto_us_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'design_1_axi_mem_intercon_imp_auto_us_0' is unconnected for instance 'auto_us' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:3159]
+WARNING: [Synth 8-7071] port 'm_axi_arregion' of module 'design_1_axi_mem_intercon_imp_auto_us_0' is unconnected for instance 'auto_us' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:3159]
+WARNING: [Synth 8-7023] instance 'auto_us' of module 'design_1_axi_mem_intercon_imp_auto_us_0' has 76 connections declared, but only 74 given [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:3159]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_7HNO1D' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:2814]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_s00_mmu_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_s00_mmu_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_s00_mmu_0' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_s00_mmu_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1W60HW0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:3236]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1W60HW0' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:3236]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_mem_intercon_imp_xbar_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_imp_xbar_0' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_axi_mem_intercon_imp_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_mem_intercon_0' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:556]
+WARNING: [Synth 8-7071] port 'S01_AXI_arready' of module 'design_1_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:226]
+WARNING: [Synth 8-7071] port 'S01_AXI_awready' of module 'design_1_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:226]
+WARNING: [Synth 8-7071] port 'S01_AXI_bid' of module 'design_1_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:226]
+WARNING: [Synth 8-7071] port 'S01_AXI_bresp' of module 'design_1_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:226]
+WARNING: [Synth 8-7071] port 'S01_AXI_bvalid' of module 'design_1_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:226]
+WARNING: [Synth 8-7071] port 'S01_AXI_rdata' of module 'design_1_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:226]
+WARNING: [Synth 8-7071] port 'S01_AXI_rid' of module 'design_1_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:226]
+WARNING: [Synth 8-7071] port 'S01_AXI_rlast' of module 'design_1_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:226]
+WARNING: [Synth 8-7071] port 'S01_AXI_rresp' of module 'design_1_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:226]
+WARNING: [Synth 8-7071] port 'S01_AXI_rvalid' of module 'design_1_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:226]
+WARNING: [Synth 8-7071] port 'S01_AXI_wready' of module 'design_1_axi_mem_intercon_0' is unconnected for instance 'axi_mem_intercon' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:226]
+WARNING: [Synth 8-7023] instance 'axi_mem_intercon' of module 'design_1_axi_mem_intercon_0' has 161 connections declared, but only 150 given [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:226]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_0_1' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_clk_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_0_1' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_clk_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'clk_250' of module 'design_1_clk_0_1' is unconnected for instance 'clk_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:377]
+WARNING: [Synth 8-7071] port 'clk_250_m45' of module 'design_1_clk_0_1' is unconnected for instance 'clk_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:377]
+WARNING: [Synth 8-7023] instance 'clk_0' of module 'design_1_clk_0_1' has 7 connections declared, but only 5 given [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:377]
+INFO: [Synth 8-6157] synthesizing module 'design_1_double_derivative_top_0_20' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_double_derivative_top_0_20_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_double_derivative_top_0_20' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_double_derivative_top_0_20_stub.v:6]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'design_1_double_derivative_top_0_20' is unconnected for instance 'double_derivative_top_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:383]
+WARNING: [Synth 8-7023] instance 'double_derivative_top_0' of module 'design_1_double_derivative_top_0_20' has 26 connections declared, but only 25 given [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:383]
+INFO: [Synth 8-6157] synthesizing module 'design_1_proc_sys_reset_0_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_proc_sys_reset_0_0' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:409]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:409]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:409]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'design_1_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:409]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'design_1_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:409]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:416]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WCOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:416]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_RACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:416]
+WARNING: [Synth 8-7071] port 'S_AXI_HP0_WACOUNT' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:416]
+WARNING: [Synth 8-7071] port 'FCLK_CLK0' of module 'design_1_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:416]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' has 107 connections declared, but only 102 given [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:416]
+INFO: [Synth 8-6157] synthesizing module 'design_1_reg_bank_0_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_reg_bank_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_reg_bank_0_0' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_reg_bank_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_stream_ctrl_0_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_stream_ctrl_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_stream_ctrl_0_0' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/.Xil/Vivado-140600-gautam-d-OptiPlex-5080/realtime/design_1_stream_ctrl_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'stream_i_tready' of module 'design_1_stream_ctrl_0_0' is unconnected for instance 'stream_ctrl_0' [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:543]
+WARNING: [Synth 8-7023] instance 'stream_ctrl_0' of module 'design_1_stream_ctrl_0_0' has 11 connections declared, but only 10 given [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:543]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (0#1) [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v:13]
+WARNING: [Synth 8-7129] Port M_ACLK in module s01_couplers_imp_1W60HW0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s01_couplers_imp_1W60HW0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module s01_couplers_imp_1W60HW0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module s01_couplers_imp_1W60HW0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_7HNO1D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_7HNO1D is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_1RU8VXS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m02_couplers_imp_1RU8VXS is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_3HM21E is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_3HM21E is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_1R706YB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_1R706YB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_bid[5] in module m00_couplers_imp_1R706YB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_bid[4] in module m00_couplers_imp_1R706YB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_bid[3] in module m00_couplers_imp_1R706YB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_bid[2] in module m00_couplers_imp_1R706YB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_bid[1] in module m00_couplers_imp_1R706YB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_rid[5] in module m00_couplers_imp_1R706YB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_rid[4] in module m00_couplers_imp_1R706YB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_rid[3] in module m00_couplers_imp_1R706YB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_rid[2] in module m00_couplers_imp_1R706YB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_AXI_rid[1] in module m00_couplers_imp_1R706YB is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2348.988 ; gain = 581.094 ; free physical = 4036 ; free virtual = 12329
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2354.926 ; gain = 587.031 ; free physical = 4036 ; free virtual = 12329
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2354.926 ; gain = 587.031 ; free physical = 4036 ; free virtual = 12329
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2354.926 ; gain = 0.000 ; free physical = 4036 ; free virtual = 12329
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0/design_1_processing_system7_0_0_in_context.xdc] for cell 'design_1_i/processing_system7_0'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_adc_0_0/design_1_adc_0_0/design_1_adc_0_0_in_context.xdc] for cell 'design_1_i/adc_0'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_adc_0_0/design_1_adc_0_0/design_1_adc_0_0_in_context.xdc] for cell 'design_1_i/adc_0'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_stream_ctrl_0_0/design_1_stream_ctrl_0_0/design_1_stream_ctrl_0_0_in_context.xdc] for cell 'design_1_i/stream_ctrl_0'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_stream_ctrl_0_0/design_1_stream_ctrl_0_0/design_1_stream_ctrl_0_0_in_context.xdc] for cell 'design_1_i/stream_ctrl_0'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_xbar_0/design_1_axi_mem_intercon_imp_xbar_0/design_1_axi_mem_intercon_imp_xbar_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/xbar'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_xbar_0/design_1_axi_mem_intercon_imp_xbar_0/design_1_axi_mem_intercon_imp_xbar_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/xbar'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_3/design_1_axi_mem_intercon_imp_auto_pc_3/design_1_axi_mem_intercon_imp_auto_pc_3_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_3/design_1_axi_mem_intercon_imp_auto_pc_3/design_1_axi_mem_intercon_imp_auto_pc_3_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_pc'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_0/design_1_axi_mem_intercon_imp_auto_us_0/design_1_axi_mem_intercon_imp_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_us_0/design_1_axi_mem_intercon_imp_auto_us_0/design_1_axi_mem_intercon_imp_auto_us_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_couplers/auto_us'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0/design_1_axi_mem_intercon_imp_auto_pc_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m00_couplers/auto_pc'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_ds_0/design_1_axi_mem_intercon_imp_auto_ds_0/design_1_axi_mem_intercon_imp_auto_ds_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m01_couplers/auto_ds'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_ds_0/design_1_axi_mem_intercon_imp_auto_ds_0/design_1_axi_mem_intercon_imp_auto_ds_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m01_couplers/auto_ds'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_1/design_1_axi_mem_intercon_imp_auto_pc_1/design_1_axi_mem_intercon_imp_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m01_couplers/auto_pc'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_1/design_1_axi_mem_intercon_imp_auto_pc_1/design_1_axi_mem_intercon_imp_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m01_couplers/auto_pc'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_ds_1/design_1_axi_mem_intercon_imp_auto_ds_1/design_1_axi_mem_intercon_imp_auto_ds_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m02_couplers/auto_ds'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_ds_1/design_1_axi_mem_intercon_imp_auto_ds_1/design_1_axi_mem_intercon_imp_auto_ds_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m02_couplers/auto_ds'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_2/design_1_axi_mem_intercon_imp_auto_pc_2/design_1_axi_mem_intercon_imp_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m02_couplers/auto_pc'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_auto_pc_2/design_1_axi_mem_intercon_imp_auto_pc_2/design_1_axi_mem_intercon_imp_auto_pc_1_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/m02_couplers/auto_pc'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_s00_mmu_0/design_1_axi_mem_intercon_imp_s00_mmu_0/design_1_axi_mem_intercon_imp_s00_mmu_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_mmu'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_axi_mem_intercon_imp_s00_mmu_0/design_1_axi_mem_intercon_imp_s00_mmu_0/design_1_axi_mem_intercon_imp_s00_mmu_0_in_context.xdc] for cell 'design_1_i/axi_mem_intercon/s00_mmu'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_clk_0_1/design_1_clk_0_1/design_1_clk_0_1_in_context.xdc] for cell 'design_1_i/clk_0'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_clk_0_1/design_1_clk_0_1/design_1_clk_0_1_in_context.xdc] for cell 'design_1_i/clk_0'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_reg_bank_0_0/design_1_reg_bank_0_0/design_1_reg_bank_0_0_in_context.xdc] for cell 'design_1_i/reg_bank_0'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_reg_bank_0_0/design_1_reg_bank_0_0/design_1_reg_bank_0_0_in_context.xdc] for cell 'design_1_i/reg_bank_0'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_double_derivative_top_0_20/design_1_double_derivative_top_0_20/design_1_double_derivative_top_0_20_in_context.xdc] for cell 'design_1_i/double_derivative_top_0'
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.gen/sources_1/bd/design_1/ip/design_1_double_derivative_top_0_20/design_1_double_derivative_top_0_20/design_1_double_derivative_top_0_20_in_context.xdc] for cell 'design_1_i/double_derivative_top_0'
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.srcs/constrs_1/imports/sdc/redpitaya-125-14.xdc]
+WARNING: [Constraints 18-619] A clock with name 'adc_clk_p_i' already exists, overwriting the previous clock with the same name. [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.srcs/constrs_1/imports/sdc/redpitaya-125-14.xdc:181]
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.srcs/constrs_1/imports/sdc/redpitaya-125-14.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.srcs/constrs_1/imports/sdc/redpitaya-125-14.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2402.578 ; gain = 0.000 ; free physical = 4076 ; free virtual = 12349
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2402.613 ; gain = 0.000 ; free physical = 4081 ; free virtual = 12354
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2402.613 ; gain = 634.719 ; free physical = 4022 ; free virtual = 12350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2410.582 ; gain = 642.688 ; free physical = 4022 ; free virtual = 12350
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2410.582 ; gain = 642.688 ; free physical = 4022 ; free virtual = 12349
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2410.582 ; gain = 642.688 ; free physical = 4014 ; free virtual = 12343
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7129] Port M00_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[5] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[4] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[3] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[2] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_bid[1] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[5] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[4] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[3] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[2] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_AXI_rid[1] in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ACLK in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S01_ARESETN in module design_1_axi_mem_intercon_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2410.582 ; gain = 642.688 ; free physical = 4022 ; free virtual = 12354
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'adc_clk_p_i'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2515.582 ; gain = 747.688 ; free physical = 3939 ; free virtual = 12265
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2516.582 ; gain = 748.688 ; free physical = 3939 ; free virtual = 12265
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2528.598 ; gain = 760.703 ; free physical = 3931 ; free virtual = 12257
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2712.410 ; gain = 944.516 ; free physical = 3779 ; free virtual = 12104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2712.410 ; gain = 944.516 ; free physical = 3779 ; free virtual = 12104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2712.410 ; gain = 944.516 ; free physical = 3779 ; free virtual = 12104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2712.410 ; gain = 944.516 ; free physical = 3779 ; free virtual = 12104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2712.410 ; gain = 944.516 ; free physical = 3779 ; free virtual = 12104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2712.410 ; gain = 944.516 ; free physical = 3779 ; free virtual = 12104
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------------------------+----------+
+|      |BlackBox name                           |Instances |
++------+----------------------------------------+----------+
+|1     |design_1_adc_0_0                        |         1|
+|2     |design_1_axi_mem_intercon_imp_s00_mmu_0 |         1|
+|3     |design_1_axi_mem_intercon_imp_xbar_0    |         1|
+|4     |design_1_axi_mem_intercon_imp_auto_pc_0 |         1|
+|5     |design_1_axi_mem_intercon_imp_auto_ds_0 |         1|
+|6     |design_1_axi_mem_intercon_imp_auto_pc_1 |         1|
+|7     |design_1_axi_mem_intercon_imp_auto_ds_1 |         1|
+|8     |design_1_axi_mem_intercon_imp_auto_pc_2 |         1|
+|9     |design_1_axi_mem_intercon_imp_auto_pc_3 |         1|
+|10    |design_1_axi_mem_intercon_imp_auto_us_0 |         1|
+|11    |design_1_clk_0_1                        |         1|
+|12    |design_1_double_derivative_top_0_20     |         1|
+|13    |design_1_proc_sys_reset_0_0             |         1|
+|14    |design_1_processing_system7_0_0         |         1|
+|15    |design_1_reg_bank_0_0                   |         1|
+|16    |design_1_stream_ctrl_0_0                |         1|
++------+----------------------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------------+------+
+|      |Cell                                  |Count |
++------+--------------------------------------+------+
+|1     |design_1_adc_0                        |     1|
+|2     |design_1_axi_mem_intercon_imp_auto_ds |     2|
+|4     |design_1_axi_mem_intercon_imp_auto_pc |     4|
+|8     |design_1_axi_mem_intercon_imp_auto_us |     1|
+|9     |design_1_axi_mem_intercon_imp_s00_mmu |     1|
+|10    |design_1_axi_mem_intercon_imp_xbar    |     1|
+|11    |design_1_clk_0                        |     1|
+|12    |design_1_double_derivative_top_0      |     1|
+|13    |design_1_proc_sys_reset_0             |     1|
+|14    |design_1_processing_system7_0         |     1|
+|15    |design_1_reg_bank_0                   |     1|
+|16    |design_1_stream_ctrl_0                |     1|
+|17    |IBUF                                  |    28|
+|18    |OBUF                                  |     1|
++------+--------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2712.410 ; gain = 944.516 ; free physical = 3779 ; free virtual = 12104
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2712.410 ; gain = 896.828 ; free physical = 3779 ; free virtual = 12104
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2712.418 ; gain = 944.516 ; free physical = 3779 ; free virtual = 12104
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2712.418 ; gain = 0.000 ; free physical = 3850 ; free virtual = 12174
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2712.418 ; gain = 0.000 ; free physical = 3842 ; free virtual = 12183
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: ccaae9d0
+INFO: [Common 17-83] Releasing license: Synthesis
+71 Infos, 93 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:26 . Memory (MB): peak = 2712.445 ; gain = 1105.410 ; free physical = 3841 ; free virtual = 12183
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1853.449; main = 1853.449; forked = 282.819
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3396.793; main = 2712.414; forked = 994.211
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2736.422 ; gain = 0.000 ; free physical = 3856 ; free virtual = 12197
+INFO: [Common 17-1381] The checkpoint '/home/gautam-d/nodma_cic_extend/nodma_cic_extend.runs/synth_1/design_1_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 12 12:12:41 2026...
